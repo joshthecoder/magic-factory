@@ -18,14 +18,12 @@ ActiveRecord::Schema.define(version: 20141019003455) do
 
   create_table "cards", force: true do |t|
     t.string   "name",                null: false
-    t.string   "type",                null: false
+    t.string   "card_type",           null: false
     t.string   "names"
     t.string   "colors"
-    t.integer  "layout",              null: false
+    t.integer  "card_layout",         null: false
     t.string   "mana_cost"
-    t.integer  "converted_mana_cost", null: false
-    t.string   "rarity",              null: false
-    t.string   "card_number",         null: false
+    t.integer  "converted_mana_cost"
     t.string   "power"
     t.string   "toughness"
     t.integer  "loyalty"
