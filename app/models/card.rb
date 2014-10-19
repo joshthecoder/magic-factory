@@ -9,6 +9,10 @@ class Card < ActiveRecord::Base
   end
 
   def mana_symbols
-    mana_cost.scan(/{(\w)}/).flatten
+    if mana_cost
+      mana_cost.scan(/{(\w)}/).flatten
+    else
+      []
+    end
   end
 end
