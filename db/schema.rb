@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20141019003455) do
     t.string   "toughness"
     t.integer  "loyalty"
     t.string   "image_name"
-    t.date     "release_date",        null: false
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

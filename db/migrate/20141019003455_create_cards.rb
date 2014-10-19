@@ -14,7 +14,6 @@ class CreateCards < ActiveRecord::Migration
       t.column :toughness, :string
       t.column :loyalty, :integer
       t.column :image_name, :string
-      t.column :release_date, :date, null: false
 
       t.timestamps null: false
     end
