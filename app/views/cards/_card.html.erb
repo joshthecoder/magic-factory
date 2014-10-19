@@ -5,5 +5,8 @@
   <div class="media-body">
     <h4 class="meda-heading"><%= card.name %></h4>
     <p><%= card.text %></p>
+    <% card.mana_symbols.each do |m| %>
+      <img src="http://mtgimage.com/symbol/mana/<%= m %>/32.png">
+    <% end %>
   </div>
 </li>

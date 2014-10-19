@@ -7,4 +7,8 @@ class Card < ActiveRecord::Base
   def image_url
     "http://mtgimage.com/card/#{image_name}.jpg"
   end
+
+  def mana_symbols
+    mana_cost.scan(/{(\w)}/).flatten
+  end
 end
