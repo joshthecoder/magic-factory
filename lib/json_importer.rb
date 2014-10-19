@@ -13,7 +13,8 @@ class JSONImporter
       converted_mana_cost: data['cmc'],
       power: data['power'],
       toughness: data['toughness'],
-      image_name: data['imageName']
+      image_name: data['imageName'],
+      text: data['text']
     )
   end
 end

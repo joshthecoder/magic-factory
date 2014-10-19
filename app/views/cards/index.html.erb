@@ -1,0 +1,12 @@
+<%= form_tag({controller: 'cards', action: 'search'}, method: 'get', class: 'card-search-form') do %>
+  <div class="input-group">
+    <%= text_field_tag(:q, @query, class: 'form-control') %>
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-search"></span>
+    </span>
+  </div>
+<% end %>
+
+<ul class="media-list">
+  <%= render @cards if @cards %>
+</ul>
