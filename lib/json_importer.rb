@@ -1,6 +1,6 @@
 class JSONImporter
   def import_all_cards(cards)
-    cards.each { |name, data| import_card(data) }
+    cards.each_value { |data| import_card(data) }
   end
 
   def import_card(data)
