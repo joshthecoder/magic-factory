@@ -7,6 +7,8 @@
   </div>
 <% end %>
 
-<ul class="media-list">
-  <%= render @cards if @cards %>
-</ul>
+<% if @cards %>
+  <ul class="media-list">
+    <%= render(@cards) || "No matching cards found. Please try a different search." %>
+  </ul>
+<% end %>
