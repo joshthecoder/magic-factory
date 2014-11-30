@@ -10,6 +10,8 @@ namespace :mtgjson do
   desc "Import all card data from mtgjson.com"
   task import_cards: :environment do
     cards = JSON.parse(Net::HTTP.get(ALL_CARDS_URI))
-    JSONImporter.new.import_all_cards(cards)
+    Card.transaction do
+      JSONImporter.new.import_all_cards(cards)
+    end
   end
 end
