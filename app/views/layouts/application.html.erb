@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MagicFactory</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
@@ -23,17 +17,19 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
-      <div class="page-header">
-        <h1><a href="/">Magic Factory</a></h1> <small>A place to search for <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> cards. Search is powered by ElasticSearch and card data imported from <a href="http://mtgjson.com/">MTG JSON</a>.</small>
-      </div>
+    <div class="ui page padded grid">
+      <div class="column">
+        <h1 class="ui dividing header">
+          <div class="content">
+            <a href="/">Magic Factory</a>
+            <div class="sub header">A place to search for <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> cards. Search is powered by ElasticSearch and card data imported from <a href="http://mtgjson.com/">MTG JSON</a>.</div>
+          </div>
+        </h1>
 
-      <%= yield %>
+        <%= yield %>
+      </div>
     </div>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>

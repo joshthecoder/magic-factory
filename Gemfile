@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby "2.1.4"
 
@@ -53,6 +54,9 @@ group :development, :test do
   gem 'database_cleaner'
 
   gem 'pry-rails'
+
+  # Asset dependencies via Rails Assets
+  gem 'rails-assets-semantic-ui'
 end
 
 group :production do

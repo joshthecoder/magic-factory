@@ -1,12 +1,14 @@
-<li class="media">
-  <a class="pull-left" href="<%= url_for(card) %>">
-    <img class="media-object" src="<%= card.image_url %>" width="128">
+<div class="item">
+  <a class="ui tiny image" href="<%= url_for(card) %>">
+    <img src="<%= card.image_url %>">
   </a>
-  <div class="media-body">
-    <h4 class="meda-heading"><%= card.name %></h4>
-    <p><%= card.text %></p>
-    <% card.mana_symbols.each do |m| %>
-      <img src="http://mtgimage.com/symbol/mana/<%= m %>/32.png">
-    <% end %>
+  <div class="content">
+    <a href="<%= url_for(card) %>" class="header"><%= card.name %></a>
+    <div class="description"><%= card.text %></div>
+    <div class="extra">
+      <% card.mana_symbols.each do |m| %>
+        <img src="http://mtgimage.com/symbol/mana/<%= m %>/32.png">
+      <% end %>
+    </div>
   </div>
-</li>
+</div>

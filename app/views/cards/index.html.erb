@@ -1,14 +1,12 @@
 <%= form_tag({controller: 'cards', action: 'search'}, method: 'get', class: 'card-search-form') do %>
-  <div class="input-group">
+  <div class="ui fluid icon input">
     <%= text_field_tag(:q, @query, class: 'form-control') %>
-    <span class="input-group-addon">
-      <span class="glyphicon glyphicon-search"></span>
-    </span>
+    <i class="circular search icon"></i>
   </div>
 <% end %>
 
 <% if @cards %>
-  <ul class="media-list">
+  <div class="ui items">
     <%= render(@cards) || "No matching cards found. Please try a different search." %>
-  </ul>
+  </div>
 <% end %>
