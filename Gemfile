@@ -36,6 +36,9 @@ gem 'elasticsearch-rails'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+# Asset dependencies via Rails Assets
+gem 'rails-assets-semantic-ui'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -54,9 +57,6 @@ group :development, :test do
   gem 'database_cleaner'
 
   gem 'pry-rails'
-
-  # Asset dependencies via Rails Assets
-  gem 'rails-assets-semantic-ui'
 end
 
 group :production do
