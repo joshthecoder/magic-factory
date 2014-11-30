@@ -4,7 +4,7 @@ source 'https://rails-assets.org'
 ruby "2.1.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0.beta4'
+gem 'rails', '4.2.0.rc1'
 
 # Use PostgreSQL for database
 gem 'pg'
